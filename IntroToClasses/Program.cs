@@ -1,102 +1,28 @@
-﻿/*
-    JavaScript: 
-    let terje = {
-        name: 'Terje',
-        birthYear: 1975,
-    };
-
-    let terje = {};
-    terje.name = 'Terje';
-    terje.birthYear = 1975;
- */
-
-using IntroToClasses;
-
-var terje1 = new Person
-{
-    Name = "Terje",
-    BirthYear = 1975,
-};
-
-var terje2 = new Person();
-terje2.Name = "Terje";
-terje2.BirthYear = 1975;
+﻿using IntroToClasses;
 
 /*
-    JavaScript: 
-    let people = [
-        {
-            name: 'Terje',
-            birthYear: 1975,
-        },
-        {
-            name: 'Per',
-            birthYear: 1976,
-        },
-    ];
+ *
+ * Pause til 13:35
+ *
+ * 1: Oversette direkte fra JavaScript
+ *    Klasse for hver type objekt
+ * 2: Metoder i klasser
+ * 3: Innkapsling
+ * 4: Constructor
+ *
+ * : Properties
  */
 
-var people1 = new Person[]
-{
-    new Person
-    {
-        Name = "Terje",
-        BirthYear = 1975,
-    },
-    new Person
-    {
-        Name = "Per",
-        BirthYear = 1976,
-    },
-};
 
-var people2 = new Person[2];
-people1[0] = new Person
-{
-    Name = "Terje",
-    BirthYear = 1975,
-};
-people1[1] = new Person
-{
-    Name = "Per",
-    BirthYear = 1976,
-};
+//Intro.Run();
+var p1 = new Person("Terje", 1975);
+//p1.Init("Terje", 1975);
+p1.Show();
 
-/*
-    JavaScript: 
-    let model = {
-        currentUser: 'terje',
-        someNumber: 17,
-        people: [
-            {
-                name: 'Terje',
-                birthYear: 1975,
-            },
-            {
-                name: 'Per',
-                birthYear: 1976,
-            },
-        ]
-    };
- */
+var p2 = new Person("Tarje", 1976);
+//p2.Init("Tarje", 1976 );
+p2.Show();
 
-var model = new Model
-{
-    CurrentUser = "Terje",
-    SomeNumber = 17,
-    People = new Person[]
-    {
-        new Person
-        {
-            Name = "Terje",
-            BirthYear = 1975,
-        },
-        new Person
-        {
-            Name = "Per",
-            BirthYear = 1976,
-        },
-    },
-};
+var p3 = new Person(2000);
 
-// Pause 13:00
+var age = p2.GetAge();
